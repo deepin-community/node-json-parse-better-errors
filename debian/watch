@@ -1,0 +1,12 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-json-parse-better-errors-$1.tar.gz/ \
+ https://github.com/zkat/json-parse-better-errors/tags .*/archive/v?([\d\.]+).tar.gz group
+
+opts=\
+component=json-parse-even-better-errors,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-json-parse-even-better-errors-$1.tar.gz/ \
+ https://github.com/npm/json-parse-even-better-errors/tags .*/archive/v?([\d\.]+).tar.gz group

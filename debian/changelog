@@ -1,0 +1,44 @@
+node-json-parse-better-errors (1.0.2+~2.3.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Use dh-sequence-nodejs auto test & install
+  * Embed json-parse-even-better-errors (same author, same goal)
+  * New upstream version 1.0.2+~2.3.1
+  * Update copyright
+  * Apply multi-arch hints (foreign)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 02 Dec 2020 14:01:59 +0100
+
+node-json-parse-better-errors (1.0.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Enable nocheck build profile
+  * Bump Standards-Version to 4.2.1 (no changes needed)
+  * Bump debhelper compatibility level to 11
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 13 Sep 2018 15:31:02 +0530
+
+node-json-parse-better-errors (1.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Hari Govind S <harigovindind@gmail.com>  Tue, 19 Jun 2018 11:45:55 +0000
+
+node-json-parse-better-errors (1.0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: 885583)
+
+ -- Hari Govind S <harigovindind@gmail.com>  Wed, 27 Dec 2017 07:29:59 +0000

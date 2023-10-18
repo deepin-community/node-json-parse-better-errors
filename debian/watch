@@ -1,12 +1,17 @@
 version=4
 opts=\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-json-parse-better-errors-$1.tar.gz/ \
- https://github.com/zkat/json-parse-better-errors/tags .*/archive/v?([\d\.]+).tar.gz group
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-json-parse-better-errors-$1/ \
+ https://github.com/zkat/json-parse-better-errors/tags .*/archive/.*/v?([\d\.]+).tar.gz group
 
 opts=\
 component=json-parse-even-better-errors,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-json-parse-even-better-errors-$1.tar.gz/ \
- https://github.com/npm/json-parse-even-better-errors/tags .*/archive/v?([\d\.]+).tar.gz group
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-json-parse-even-better-errors-$1/ \
+ https://github.com/npm/json-parse-even-better-errors/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-json-parse-better-errors,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-json-parse-better-errors-$1/" \
+ https://registry.npmjs.org/@types/json-parse-better-errors https://registry.npmjs.org/@types/json-parse-better-errors/-/json-parse-better-errors-([\d\.]+)@ARCHIVE_EXT@ checksum

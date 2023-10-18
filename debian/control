@@ -6,7 +6,7 @@ Uploaders: Hari Govind S <harigovindind@gmail.com>
 Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
  , node-tap <!nocheck>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/js-team/node-json-parse-better-errors
 Vcs-Git: https://salsa.debian.org/js-team/node-json-parse-better-errors.git
 Homepage: https://github.com/zkat/json-parse-better-errors

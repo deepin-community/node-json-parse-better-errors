@@ -1,0 +1,87 @@
+Description: fix for tap >= 15
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/1009554
+Forwarded: no
+Last-Update: 2022-04-13
+
+--- a/test/index.js
++++ b/test/index.js
+@@ -12,7 +12,7 @@
+     }
+   })
+   t.deepEqual(JSON.parse(data), parseJson(data), 'does the same thing')
+-  t.done()
++  t.end()
+ })
+ 
+ test('throws SyntaxError for unexpected token', t => {
+@@ -21,7 +21,7 @@
+     () => parseJson(data),
+     new SyntaxError('Unexpected token o in JSON at position 1 while parsing near \'foo\'')
+   )
+-  t.done()
++  t.end()
+ })
+ 
+ test('throws SyntaxError for unexpected end of JSON', t => {
+@@ -30,7 +30,7 @@
+     () => parseJson(data),
+     new SyntaxError('Unexpected end of JSON input while parsing near \'{"foo: bar}\'')
+   )
+-  t.done()
++  t.end()
+ })
+ 
+ test('throws SyntaxError for unexpected number', t => {
+@@ -39,7 +39,7 @@
+     () => parseJson(data),
+     new SyntaxError('Unexpected number in JSON at position 8')
+   )
+-  t.done()
++  t.end()
+ })
+ 
+ test('SyntaxError with less context (limited start)', t => {
+@@ -47,7 +47,7 @@
+   t.throws(
+     () => parseJson(data, null, 3),
+     new SyntaxError('Unexpected end of JSON input while parsing near \'...3210\''))
+-  t.done()
++  t.end()
+ })
+ 
+ test('SyntaxError with less context (limited end)', t => {
+@@ -55,7 +55,7 @@
+   t.throws(
+     () => parseJson(data, null, 2),
+     new SyntaxError('Unexpected token a in JSON at position 0 while parsing near \'ab...\''))
+-  t.done()
++  t.end()
+ })
+ 
+ test('throws TypeError for undefined', t => {
+@@ -63,7 +63,7 @@
+     () => parseJson(undefined),
+     new TypeError('Cannot parse undefined')
+   )
+-  t.done()
++  t.end()
+ })
+ 
+ test('throws TypeError for non-strings', t => {
+@@ -71,7 +71,7 @@
+     () => parseJson(new Map()),
+     new TypeError('Cannot parse [object Map]')
+   )
+-  t.done()
++  t.end()
+ })
+ 
+ test('throws TypeError for empty arrays', t => {
+@@ -79,5 +79,5 @@
+     () => parseJson([]),
+     new TypeError('Cannot parse an empty array')
+   )
+-  t.done()
++  t.end()
+ })

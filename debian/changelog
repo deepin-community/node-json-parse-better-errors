@@ -1,3 +1,20 @@
+node-json-parse-better-errors (1.0.2+~cs3.3.1-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix test for tap >= 15 (Closes: #1009554)
+
+ -- Yadd <yadd@debian.org>  Wed, 13 Apr 2022 13:05:11 +0200
+
+node-json-parse-better-errors (1.0.2+~cs3.3.1-1) unstable; urgency=medium
+
+  * Team upload
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Embed typescript definitions and repack
+
+ -- Yadd <yadd@debian.org>  Tue, 30 Nov 2021 06:36:47 +0100
+
 node-json-parse-better-errors (1.0.2+~2.3.1-1) unstable; urgency=medium
 
   * Team upload

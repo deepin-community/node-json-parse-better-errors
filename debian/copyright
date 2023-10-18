@@ -3,6 +3,7 @@ Upstream-Name: json-parse-better-errors
 Upstream-Contact: https://github.com/zkat/json-parse-better-errors/issues
 Source: https://github.com/zkat/json-parse-better-errors#readme
  https://github.com/npm/json-parse-even-better-errors/tags
+ https://registry.npmjs.org/@types/json-parse-better-errors
 
 Files: *
 Copyright: 2017 Kat Marchán <kzm@sykosomatic.org>
@@ -11,7 +12,11 @@ License: Expat
 
 Files: debian/*
 Copyright: 2017 Hari Govind S <harigovindind@gmail.com>
- 2020 Xavier Guimard <yadd@debian.org>
+ 2020 Yadd <yadd@debian.org>
+License: Expat
+
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat
